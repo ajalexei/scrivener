@@ -14,8 +14,8 @@ chrome.action.onClicked.addListener(
     async () => {
         chrome.windows.create({
             url: chrome.runtime.getURL("pen.html"),
-//            type: "popup",
-            focused: true
+            type: "popup",
+            focused: true,
         });
 //        let url = chrome.runtime.getURL("test.html");
 //        let tab = await chrome.tabs.create({url});
