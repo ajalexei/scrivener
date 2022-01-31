@@ -1,11 +1,12 @@
 // credits to tbuckley@ that provided the first implementation.
 
 const canvas = document.querySelector("canvas");
+//const canvas = document.createElement("canvas");
+//const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d",
     {
         desynchronized: true,
         alpha: false
-        
     });
 
 function getPoint(e) {
@@ -14,6 +15,7 @@ function getPoint(e) {
 }
 
 let point;
+
 canvas.addEventListener("pointerdown", (e) => {
   point = getPoint(e);
 });
@@ -32,14 +34,17 @@ canvas.addEventListener("pointermove", (e) => {
   });
 
 });
+
 canvas.addEventListener("pointerup", (e) => {
   point = null;
 });
 
 const angle = screen.orientation.angle % 360;
 //canvas.style.transform = `rotateZ(${angle}deg)`;
-width = window.innerWidth * 0.9;
-height = window.innerHeight * 0.8;
+// 0.6
+width = window.innerWidth;
+// 0.8
+height = window.innerHeight;
 if (angle % 180 == 90) {
   canvas.width = height;
   canvas.height = width;
