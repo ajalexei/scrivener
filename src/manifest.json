@@ -1,7 +1,7 @@
 {
     "name": "scrivener",
     "description": "Handwritten notes with a stylus",
-    "version": "20210804",
+    "version": "20220131",
     "manifest_version": 3,
     "offline_enabled": true,
 //    "display": "standalone",
@@ -9,7 +9,7 @@
 //        "service_worker": "pen.js"
         "service_worker": "background.js"
     },
-    "permissions": ["storage", "tabs"],
+    "permissions": ["storage", "contextMenus"],
     "action": {
         "default_title": "scrivener"
 //        "default_popup": "pen.html"
