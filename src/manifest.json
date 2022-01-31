@@ -3,11 +3,18 @@
     "description": "Handwritten notes with a stylus",
     "version": "20210804",
     "manifest_version": 3,
-//    "background": {
+    "offline_enabled": true,
+//    "display": "standalone",
+    "background": {
+//        "persistent": false,
 //        "service_worker": "pen.js"
-//    },
-    "permissions": ["storage"],
+        "service_worker": "main.js"
+    },
+    "permissions": ["storage", "tabs"],
     "action": {
-        "default_popup": "pen.html"
+        "default_title": "scrivener"
     }
+//    "action": {
+//        "default_popup": "pen.html"
+//    }
 }
