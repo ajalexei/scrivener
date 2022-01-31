@@ -8,9 +8,9 @@
 //    let tab = await chrome.tabs.create({url});
 //}
 
-//chrome.browserAction.onClicked.addListener(start);
+chrome.action.onClicked.addListener(
 //chrome.runtime.onClicked.addListener(start);
-chrome.runtime.onInstalled.addListener(
+//chrome.runtime.onInstalled.addListener(
     async () => {
         chrome.windows.create({
             url: chrome.runtime.getURL("pen.html"),
